@@ -142,12 +142,12 @@ log_success "Installed in ${MINUTES}m ${SECONDS}s"
 echo
 
 # Load backup info from session file for display
-source "$HOME/.local/share/dotfiles/.dotfiles-backup-session"
+source "$HOME/.local/share/niri-dotfiles/.dotfiles-backup-session"
 log_info "Backup saved to: $BACKUP_DIR"
 log_info "Restore instructions: cat $RESTORE_FILE"
 
 # Clean up session file
-rm -f "$HOME/.local/share/dotfiles/.dotfiles-backup-session"
+rm -f "$HOME/.local/share/niri-dotfiles/.dotfiles-backup-session"
 
 # Mark all existing updates as applied for fresh install
 DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
