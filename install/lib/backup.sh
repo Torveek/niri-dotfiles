@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BACKUP_ROOT="$HOME/dotfiles-backup"
-SESSION_FILE="$HOME/.local/share/dotfiles/.dotfiles-backup-session"
+SESSION_FILE="$HOME/.local/share/niri-dotfiles/.dotfiles-backup-session"
 
 init_backup_session() {
   local BACKUP_SESSION="backup_$(date +%Y%m%d_%H%M%S)"
