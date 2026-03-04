@@ -1,1 +1,1 @@
-source ~/.local/share/dotfiles/default/zshrc/rc
+source ~/.local/share/niri-dotfiles/default/zshrc/rc
