@@ -1,0 +1,66 @@
+# System & Security
+gnome-keyring
+openssh
+polkit-gnome
+ufw
+usbutils
+
+# Terminal & Shell
+alacritty
+bat
+bc
+btop
+eza
+fastfetch
+fd
+fzf
+jq
+pv
+ripgrep
+starship
+zoxide
+zsh
+
+# Development
+git
+lazygit
+neovim
+
+# Browsers
+firefox
+# helium-browser-bin
+# zen-browser-bin
+
+# Niri
+niri
+noctalia-shell
+
+# Wayland UI & Utilities
+fuzzel
+xwayland-satellite  
+
+# File Management & Desktop
+nautilus
+nautilus-open-any-terminal
+rsync
+unzip
+
+# System Utilities
+power-profiles-daemon
+
+# Appearance
+bibata-cursor-theme
+bibata-cursor-theme
+gnome-themes-extra
+noto-fonts
+noto-fonts-emoji
+otf-font-awesome
+ttf-cascadia-mono-nerd
+ttf-jetbrains-mono-nerd
+
+# Applications
+mpv
+
+# Desktop Portals
+xdg-desktop-portal-gtk
+xdg-utils
