@@ -73,9 +73,9 @@ if [ $(grep -E '^\-' "$RESTORE_FILE" | wc -l) -gt 10 ]; then
 fi
 echo
 
-if [[ ! "$BACKUP_DIR" =~ ^"$BACKUP_ROOT" ]] && [[ ! "$BACKUP_DIR" =~ ^/home/[^/]+/\.local/share/dotfiles/dotfiles-backup ]]; then
+if [[ ! "$BACKUP_DIR" =~ ^"$BACKUP_ROOT" ]] && [[ ! "$BACKUP_DIR" =~ ^/home/[^/]+/\.local/share/niri-dotfiles/dotfiles-backup ]]; then
   log_warning "Backup is not in expected location"
-  log_warning "Expected: $BACKUP_ROOT or ~/.local/share/dotfiles/dotfiles-backup"
+  log_warning "Expected: $BACKUP_ROOT or ~/.local/share/niri-dotfiles/dotfiles-backup"
   log_warning "Actual: $BACKUP_DIR"
   echo
 fi

@@ -34,7 +34,7 @@ sed -i '/source = .*\/\(nvidia-env\.conf\|env\.conf\)$/d' "$HYPRLAND_CONF"
 sed -i '/source = .*\/\(laptop-keybindings\.conf\|desktop-keybindings\.conf\)$/d' "$HYPRLAND_CONF"
 
 # Insert correct ones for current hardware
-sed -i "/source = .*autostart\\.conf/a source = ~/.local/share/dotfiles/default/hypr/conf/${ENV_CONF}\\nsource = ~/.local/share/dotfiles/default/hypr/conf/${KEYBIND_CONF}" "$HYPRLAND_CONF"
+sed -i "/source = .*autostart\\.conf/a source = ~/.local/share/niri-dotfiles/default/hypr/conf/${ENV_CONF}\\nsource = ~/.local/share/niri-dotfiles/default/hypr/conf/${KEYBIND_CONF}" "$HYPRLAND_CONF"
 
 log_success "Hardware-specific configuration applied"
 

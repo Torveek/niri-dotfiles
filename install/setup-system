@@ -92,6 +92,22 @@ if [ -z "$CURRENT_GIT_EMAIL" ]; then
   fi
 fi
 
+# ly display manager configuration
+if is_installed "ly"; then
+  log_info "Configuring ly display manager..."
+  sudo mkdir -p /etc/systemd/system/ly.service.d
+  [ -f "/etc/systemd/system/ly.service.d/override.conf" ] && backup_file "/etc/systemd/system/ly.service.d/override.conf"
+  sudo cp "$DOTFILES_DIR/default/ly/override.conf" /etc/systemd/system/ly.service.d/override.conf
+  sudo systemctl daemon-reload
+
+  [ -f "/etc/ly/config.ini" ] && backup_file "/etc/ly/config.ini"
+  sudo rm -f /etc/ly/config.ini
+  sudo cp "$DOTFILES_DIR/default/ly/config.ini" /etc/ly/config.ini
+
+  log_success "ly display manager configured"
+else
+  log_detail "ly not installed, skipping"
+fi
 
 # Remove wait on network from system startup
 log_info "Disabling systemd-networkd-wait-online.service..."

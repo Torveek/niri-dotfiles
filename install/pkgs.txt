@@ -25,6 +25,7 @@ zsh
 git
 lazygit
 neovim
+vscodium-bin
 
 # Browsers
 firefox
@@ -38,6 +39,8 @@ noctalia-shell
 # Wayland UI & Utilities
 fuzzel
 xwayland-satellite  
+swaybg
+swaylock
 
 # File Management & Desktop
 nautilus
@@ -49,7 +52,6 @@ unzip
 power-profiles-daemon
 
 # Appearance
-bibata-cursor-theme
 bibata-cursor-theme
 gnome-themes-extra
 noto-fonts
