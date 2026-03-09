@@ -59,6 +59,7 @@ noto-fonts-emoji
 otf-font-awesome
 ttf-cascadia-mono-nerd
 ttf-jetbrains-mono-nerd
+cmatrix
 
 # Applications
 mpv
