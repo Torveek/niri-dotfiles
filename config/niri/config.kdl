@@ -116,6 +116,11 @@ layout {
     }
 }
 
+xwayland-satellite {
+    // off
+    path "xwayland-satellite"
+}
+
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
