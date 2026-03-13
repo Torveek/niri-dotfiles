@@ -1,4 +1,4 @@
-# Personal Niri Dotfiles
+# Personal Niri + Nocatalia Shell Dotfiles
 
 This repository contains my personal dotfiles for the [Niri](https://github.com/YaLTeR/niri) tiling Wayland compositor and various other tools and applications I use daily.
 
