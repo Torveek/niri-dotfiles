@@ -92,6 +92,7 @@ if [ -z "$CURRENT_GIT_EMAIL" ]; then
   fi
 fi
 
+/*
 # ly display manager configuration
 if is_installed "ly"; then
   log_info "Configuring ly display manager..."
@@ -105,6 +106,51 @@ if is_installed "ly"; then
   sudo cp "$DOTFILES_DIR/default/ly/config.ini" /etc/ly/config.ini
 
   log_success "ly display manager configured"
+else
+  log_detail "ly not installed, skipping"
+fi
+*/
+
+if is_installed "ly"; then
+  log_info "Configuring ly display manager..."
+  
+  # First, make sure ly is properly installed
+  if ! pacman -Q ly &>/dev/null; then
+    log_error "ly package is not installed"
+    return 1
+  fi
+  
+  # Create override directory and copy configs
+  sudo mkdir -p /etc/systemd/system/ly@tty2.service.d
+  [ -f "/etc/systemd/system/ly@tty2.service.d/override.conf" ] && backup_file "/etc/systemd/system/ly@tty2.service.d/override.conf"
+  sudo cp "$DOTFILES_DIR/default/ly/override.conf" /etc/systemd/system/ly@tty2.service.d/override.conf
+  
+  # Reload systemd
+  sudo systemctl daemon-reload
+  
+  # Enable ly to start at boot (using the template service)
+  sudo systemctl enable ly@tty2.service
+  
+  # Disable getty on tty2 to prevent conflicts
+  sudo systemctl disable getty@tty2.service 2>/dev/null || true
+  
+  # Also disable any other display manager that might be enabled
+  if [ -L /etc/systemd/system/display-manager.service ]; then
+    OTHER_DM=$(readlink /etc/systemd/system/display-manager.service | xargs basename 2>/dev/null | sed 's/.service//')
+    if [ -n "$OTHER_DM" ] && [ "$OTHER_DM" != "ly@tty2" ]; then
+      log_info "Disabling other display manager: $OTHER_DM"
+      sudo systemctl disable "$OTHER_DM.service" 2>/dev/null || true
+    fi
+  fi
+  
+  # Set ly as the default display manager
+  sudo ln -sf /usr/lib/systemd/system/ly@.service /etc/systemd/system/display-manager.service
+  
+  [ -f "/etc/ly/config.ini" ] && backup_file "/etc/ly/config.ini"
+  sudo rm -f /etc/ly/config.ini
+  sudo cp "$DOTFILES_DIR/default/ly/config.ini" /etc/ly/config.ini
+  
+  log_success "ly display manager configured and enabled"
 else
   log_detail "ly not installed, skipping"
 fi
