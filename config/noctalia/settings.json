@@ -544,7 +544,7 @@
         "countdownDuration": 10000,
         "enableCountdown": true,
         "largeButtonsLayout": "grid",
-        "largeButtonsStyle": true,
+        "largeButtonsStyle": false,
         "position": "center",
         "powerOptions": [
             {

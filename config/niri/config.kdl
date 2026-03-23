@@ -237,7 +237,7 @@ binds {
     // Core Noctalia binds
     Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+Shift+Space { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
-    Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard toggle"; }
+    Mod+Shift+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
     Mod+Alt+L { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
