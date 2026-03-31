@@ -32,3 +32,11 @@ c2f() {
   fi
   wl-paste > "$1"
 }
+
+n() {
+    if [ $# -eq 0 ]; then
+        nvim -c "Explore"
+    else
+        nvim "$@"
+    fi
+}

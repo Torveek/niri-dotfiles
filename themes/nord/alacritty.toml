@@ -1,36 +1,28 @@
-[window]
-# opacity=0.9
-[window.padding]
-y = 6 
-x = 6  
+# Colors (Nord)
 
-[font]
-normal = { family = "JetBrainsMono Nerd Font Propo", style = "Regular" }
-# normal = { family = "Iosevka Nerd Font Propo", style = "Regular" }
-# size = 20
-size = 14
-
-[colors.bright]
-black   = "#444b6a"
-blue    = "#7da6ff"
-cyan    = "#0db9d7"
-green   = "#b9f27c"
-magenta = "#bb9af7"
-red     = "#ff7a93"
-white   = "#acb0d0"
-yellow  = "#ff9e64"
-
-
+# Default colors
 [colors.primary]
-background = "#1a1b26"
-foreground = "#c0caf5"
+background = '#2E3440'
+foreground = '#D8DEE9'
 
+# Normal colors
 [colors.normal]
-black   = "#15161e"
-red     = "#f7768e"
-green   = "#9ece6a"
-yellow  = "#e0af68"
-blue    = "#7aa2f7"
-magenta = "#bb9af7"
-cyan    = "#7dcfff"
-white   = "#a9b1d6"
+black   = '#3B4252'
+red     = '#BF616A'
+green   = '#A3BE8C'
+yellow  = '#EBCB8B'
+blue    = '#81A1C1'
+magenta = '#B48EAD'
+cyan    = '#88C0D0'
+white   = '#E5E9F0'
+
+# Bright colors
+[colors.bright]
+black   = '#4C566A'
+red     = '#BF616A'
+green   = '#A3BE8C'
+yellow  = '#EBCB8B'
+blue    = '#81A1C1'
+magenta = '#B48EAD'
+cyan    = '#8FBCBB'
+white   = '#ECEFF4'
