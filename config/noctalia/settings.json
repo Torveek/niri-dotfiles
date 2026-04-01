@@ -299,6 +299,9 @@
                     "id": "Network"
                 },
                 {
+                    "id": "Bluetooth"
+                },
+                {
                     "id": "WallpaperSelector"
                 }
             ],
