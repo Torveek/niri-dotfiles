@@ -6,7 +6,7 @@
         "clipboardWrapText": true,
         "customLaunchPrefix": "",
         "customLaunchPrefixEnabled": false,
-        "density": "default",
+        "density": "compact",
         "enableClipPreview": true,
         "enableClipboardChips": true,
         "enableClipboardHistory": true,
@@ -102,7 +102,7 @@
             ],
             "left": [
                 {
-                    "compactMode": true,
+                    "compactMode": false,
                     "diskPath": "/",
                     "iconColor": "none",
                     "id": "SystemMonitor",
@@ -345,6 +345,11 @@
                 "name": "DP-1",
                 "widgets": [
                 ]
+            },
+            {
+                "name": "eDP-1",
+                "widgets": [
+                ]
             }
         ],
         "overviewEnabled": true
@@ -561,7 +566,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false,
+        "autoUpdate": true,
         "notifyUpdates": true
     },
     "sessionMenu": {
