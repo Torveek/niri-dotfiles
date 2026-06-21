@@ -206,6 +206,9 @@
                     "useCustomFont": false
                 },
                 {
+                    "id": "plugin:clipboard"
+                },
+                {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "none",
                     "colorizeSystemText": "none",

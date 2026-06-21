@@ -37,6 +37,7 @@ niri
 noctalia-shell
 
 # Wayland UI & Utilities
+cliphist
 fuzzel
 xwayland-satellite  
 swaybg
